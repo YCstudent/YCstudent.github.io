@@ -1,3 +1,4 @@
+/* 基本样式 */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -17,6 +18,23 @@ h1 {
     margin: 0;
 }
 
+/* 导航栏样式 */
+nav {
+    margin: 20px 0;
+    text-align: center;
+}
+
+nav a {
+    text-decoration: none;
+    margin: 0 15px;
+    color: white;
+    font-size: 18px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
 main {
     padding: 20px;
     max-width: 800px;
@@ -33,6 +51,7 @@ h2 {
     margin-bottom: 20px;
 }
 
+/* 文章列表样式 */
 .article-list .article {
     margin-bottom: 20px;
     padding: 15px;
@@ -45,6 +64,17 @@ h2 {
     margin-top: 0;
 }
 
+.article p {
+    margin-bottom: 10px;
+}
+
+.article small {
+    display: block;
+    margin-bottom: 5px;
+    color: #888;
+}
+
+/* 照片墙样式 */
 .photo-gallery {
     display: flex;
     flex-wrap: wrap;
