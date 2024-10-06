@@ -1,10 +1,16 @@
 document.addEventListener("DOMContentLoaded", function() {
-    loadArticles();
-    loadPhotos();
+    const currentPage = window.location.pathname;
+
+    if (currentPage.includes("index.html") || currentPage === "/") {
+        loadArticles(true);  // 加载主页上的文章摘要
+        loadPhotos();        // 加载照片
+    } else if (currentPage.includes("blog.html")) {
+        loadArticles(false);  // 加载博客页面上的完整文章
+    }
 });
 
 // 动态加载文章
-function loadArticles() {
+function loadArticles(isSummary) {
     fetch('data.json')
         .then(response => response.json())
         .then(data => {
@@ -12,11 +18,18 @@ function loadArticles() {
             data.articles.forEach(article => {
                 const articleElement = document.createElement('div');
                 articleElement.classList.add('article');
-                
+
+                let content;
+                if (isSummary) {
+                    content = article.content.substring(0, 100) + '...';  // 首页只显示摘要
+                } else {
+                    content = article.content;  // 博客页面显示完整内容
+                }
+
                 articleElement.innerHTML = `
                     <h3>${article.title}</h3>
-                    <p>${article.content}</p>
                     <small>发布日期: ${article.date}</small>
+                    <p>${content}</p>
                 `;
                 
                 articlesSection.appendChild(articleElement);
