@@ -1,0 +1,28 @@
+{
+    "articles": [
+        {
+            "title": "今天的感悟",
+            "content": "今天是美好的一天，我学到了很多关于编程的知识！",
+            "date": "2024-10-06"
+        },
+        {
+            "title": "血源诅咒",
+            "content": "这个游戏给我留下深刻的印象。",
+            "date": "2024-09-15"
+        }
+    ],
+    "photos": [
+        {
+            "src": "images/",
+            "alt": "照片1"
+        },
+        {
+            "src": "images/photo2.jpg",
+            "alt": "照片2"
+        },
+        {
+            "src": "images/photo3.jpg",
+            "alt": "照片3"
+        }
+    ]
+}
