@@ -1,40 +1,44 @@
-// 获取 JSON 数据并加载文章
+document.addEventListener("DOMContentLoaded", function() {
+    loadArticles();
+    loadPhotos();
+});
+
+// 动态加载文章
 function loadArticles() {
     fetch('data.json')
         .then(response => response.json())
         .then(data => {
-            const articlesSection = document.querySelector('.blog');
+            const articlesSection = document.querySelector('.article-list');
             data.articles.forEach(article => {
-                const articleElement = document.createElement('article');
+                const articleElement = document.createElement('div');
+                articleElement.classList.add('article');
+                
                 articleElement.innerHTML = `
-                    <h2>${article.title}</h2>
+                    <h3>${article.title}</h3>
                     <p>${article.content}</p>
-                    <time datetime="${article.date}">${article.date}</time>
+                    <small>发布日期: ${article.date}</small>
                 `;
+                
                 articlesSection.appendChild(articleElement);
             });
         })
-        .catch(error => console.error('Error loading articles:', error));
+        .catch(error => console.error('加载文章时出错:', error));
 }
 
-// 获取 JSON 数据并加载照片
+// 动态加载照片
 function loadPhotos() {
     fetch('data.json')
         .then(response => response.json())
         .then(data => {
-            const gallerySection = document.querySelector('.gallery');
+            const photoGallery = document.querySelector('.photo-gallery');
             data.photos.forEach(photo => {
                 const imgElement = document.createElement('img');
                 imgElement.src = photo.src;
                 imgElement.alt = photo.alt;
-                gallerySection.appendChild(imgElement);
+                
+                photoGallery.appendChild(imgElement);
             });
         })
-        .catch(error => console.error('Error loading photos:', error));
+        .catch(error => console.error('加载照片时出错:', error));
 }
 
-// 页面加载时调用
-document.addEventListener('DOMContentLoaded', () => {
-    loadArticles();
-    loadPhotos();
-});
