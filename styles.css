@@ -1,45 +1,10 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
-    line-height: 1.6;
-}
-
-header {
-    background: #333;
-    color: #fff;
-    padding: 10px 0;
-    text-align: center;
-}
-
-header nav a {
-    color: #fff;
-    text-decoration: none;
-    margin: 0 15px;
-}
-
-header h1 {
-    margin-bottom: 15px;
-}
-
-.intro, .blog, .gallery {
-    padding: 20px;
-    margin: 20px auto;
-    max-width: 800px;
-}
-
-footer {
-    text-align: center;
-    padding: 20px;
-    background: #333;
-    color: #fff;
-    margin-top: 20px;
+/* 保持之前的样式，并新增一些样式 */
+.blog article {
+    background-color: #fff;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 .gallery img {
@@ -47,4 +12,6 @@ footer {
     max-width: 300px;
     margin: 10px;
     display: inline-block;
+    border-radius: 8px;
 }
+
