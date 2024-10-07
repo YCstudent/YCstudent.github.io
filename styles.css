@@ -7,7 +7,6 @@ body {
     color: #333;
 }
 
-
 header {
     background-color: #4CAF50;
     color: white;
@@ -151,6 +150,24 @@ nav ul li a:hover {
 
 .article-list .article a:hover {
     text-decoration: underline;
+}
+
+/* 单篇文章详情页面样式 */
+article img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px; /* 图片圆角 */
+    margin-bottom: 20px; /* 图片与文字的间距 */
+}
+
+article h2 {
+    font-size: 2em;
+    margin: 20px 0;
+}
+
+article p {
+    font-size: 1.2em;
+    line-height: 1.6;
 }
 
 /* 翻页按钮 */
