@@ -8,18 +8,61 @@
 </head>
 <body>
     <header>
-        <h1>个人博客</h1>
-    </header>
-    <main>
-        <section id="articles"></section>
-        <div id="pagination">
-            <button id="prevPage">上一页</button>
-            <button id="nextPage">下一页</button>
+        <nav>
+            <ul>
+                <li><a href="index.html">首页</a></li>
+                <li><a href="blog.html">博客</a></li>
+                <li><a href="#categories">分类</a></li>
+                <li><a href="#contact">联系我</a></li>
+            </ul>
+        </nav>
+        <div class="hero">
+            <h1>欢迎来到我的个人博客</h1>
+            <p>分享我的生活和感悟</p>
         </div>
+    </header>
+
+    <!-- 图片轮播部分 -->
+    <section id="carousel">
+        <div class="carousel-container">
+            <img src="images/featured1.jpg" alt="特色图片1">
+            <img src="images/featured2.jpg" alt="特色图片2">
+            <img src="images/featured3.jpg" alt="特色图片3">
+        </div>
+    </section>
+
+    <!-- 分类部分 -->
+    <section id="categories">
+        <h2>文章分类</h2>
+        <div class="category-list">
+            <div class="category" data-category="编程">编程</div>
+            <div class="category" data-category="旅行">旅行</div>
+            <div class="category" data-category="生活感悟">生活感悟</div>
+            <div class="category" data-category="摄影">摄影</div>
+        </div>
+    </section>
+
+    <main>
+        <section id="articles">
+            <h2>最新文章</h2>
+            <div class="article-list">
+                <!-- JavaScript 会动态加载文章摘要 -->
+            </div>
+            <div id="pagination">
+                <button id="prevPage">上一页</button>
+                <button id="nextPage">下一页</button>
+            </div>
+        </section>
     </main>
+
+    <footer id="contact">
+        <p>© 2024 个人博客 | 联系我: <a href="mailto:youremail@example.com">youremail@example.com</a></p>
+    </footer>
+
     <script src="script.js"></script>
 </body>
 </html>
+
 
 
 
