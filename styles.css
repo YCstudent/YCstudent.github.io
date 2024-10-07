@@ -48,9 +48,35 @@ nav ul li a:hover {
     font-size: 1.2em;
 }
 
-/* 轮播部分 */
-#carousel {
-    margin: 20px 0;
+/* 照片墙部分 */
+#photo-wall {
+    padding: 20px;
+    text-align: center;
+}
+
+.photo-grid {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.photo-grid img {
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.photo-grid img:hover {
+    transform: scale(1.05);
+}
+
+/* 隐藏照片墙 */
+.hidden {
+    display: none;
+}
 }
 
 .carousel-container {
