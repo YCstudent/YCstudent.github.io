@@ -36,13 +36,12 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-// 加载数据并按 id 降序排列
+// 加载数据
 function loadData() {
     fetch('data.json')
         .then(response => response.json())
         .then(data => {
-            // 对文章按 id 降序排列
-            allArticles = data.articles.sort((a, b) => b.id - a.id);
+            allArticles = data.articles;
             totalArticles = allArticles.length;
             displayArticles();
             loadPhotos(data.photos);
@@ -72,7 +71,7 @@ function displayArticles() {
     }
 
     paginatedArticles.forEach(article => {
-        articlesSection.innerHTML += `
+        articlesSection.innerHTML += 
             <div class="article">
                 <h2>${article.title}</h2>
                 <p class="date">发布日期: ${article.date}</p>
@@ -80,7 +79,7 @@ function displayArticles() {
                 <p>${article.content.substring(0, 100)}...</p>
                 <a href="blog.html?id=${article.id}">阅读更多</a>
             </div>
-        `;
+        ;
     });
 }
 
@@ -88,9 +87,9 @@ function displayArticles() {
 function loadPhotos(photos) {
     const carouselContainer = document.querySelector('.carousel-container');
     photos.forEach(photo => {
-        carouselContainer.innerHTML += `
+        carouselContainer.innerHTML += 
             <img src="${photo.src}" alt="${photo.alt}">
-        `;
+        ;
     });
 }
 
