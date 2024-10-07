@@ -1,6 +1,15 @@
 {
     "articles": [
         {
+            "id": 7,
+            "title": "网站开发",
+            "content": "开发网站真的不是件容易事，有好多bug要修复，不过开发完咸后也挺有成就感的。",
+            "date": "2024-10-07",
+            "category": "编程",
+            "image": "images/屏幕截图 2024-10-07 221050.png",
+            "image": "images/屏幕截图 2024-10-07 221103.png"
+        },
+        {
             "id": 6,
             "title": "Grammar Test",
             "content": "明天有一个语法考试，好烦躁，我开始担心我的保研了。",
