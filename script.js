@@ -24,14 +24,20 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.category').forEach(category => {
         category.addEventListener('click', () => {
             const selectedCategory = category.getAttribute('data-category');
-            if (currentCategory === selectedCategory) {
-                currentCategory = null;
-            } else {
-                currentCategory = selectedCategory;
-            }
+            currentCategory = currentCategory === selectedCategory ? null : selectedCategory;
             currentPage = 1;
             displayArticles();
         });
+    });
+
+    // 照片墙链接点击事件
+    document.getElementById('photo-wall-link').addEventListener('click', (e) => {
+        e.preventDefault();
+        const photoWall = document.getElementById('photo-wall');
+        if (photoWall.classList.contains('hidden')) {
+            photoWall.classList.remove('hidden');
+            photoWall.scrollIntoView({ behavior: 'smooth' });
+        }
     });
 });
 
@@ -40,22 +46,19 @@ function loadData() {
         .then(response => response.json())
         .then(data => {
             allArticles = data.articles.sort((a, b) => b.id - a.id);
-            totalArticles = allArticles.length;
             displayArticles();
         })
         .catch(error => console.error('加载数据时出错:', error));
 }
 
 function displayArticles() {
-    let filteredArticles = allArticles;
-    if (currentCategory) {
-        filteredArticles = allArticles.filter(article => article.category === currentCategory);
-    }
+    let filteredArticles = currentCategory
+        ? allArticles.filter(article => article.category === currentCategory)
+        : allArticles;
 
     totalArticles = filteredArticles.length;
     const start = (currentPage - 1) * articlesPerPage;
-    const end = start + articlesPerPage;
-    const paginatedArticles = filteredArticles.slice(start, end);
+    const paginatedArticles = filteredArticles.slice(start, start + articlesPerPage);
 
     const articlesSection = document.querySelector('.article-list');
     articlesSection.innerHTML = '';
@@ -66,16 +69,24 @@ function displayArticles() {
     }
 
     paginatedArticles.forEach(article => {
-        articlesSection.innerHTML += `
-            <div class="article">
-                <h2>${article.title}</h2>
-                <p class="date">发布日期: ${article.date}</p>
-                <img src="${article.image}" alt="${article.title}" />
-                <p>${article.content.substring(0, 100)}...</p>
-                <a href="blog.html?id=${article.id}">阅读更多</a>
-            </div>
+        const articleDiv = document.createElement('div');
+        articleDiv.classList.add('article');
+        articleDiv.innerHTML = `
+            <h2>${article.title}</h2>
+            <p class="date">发布日期: ${article.date}</p>
+            <img src="${article.image}" alt="${article.title}" />
+            <p>${article.content.substring(0, 100)}...</p>
+            <a href="blog.html?id=${article.id}">阅读更多</a>
         `;
+        articlesSection.appendChild(articleDiv);
     });
+
+    updatePaginationButtons();
+}
+
+function updatePaginationButtons() {
+    document.getElementById('prevPage').disabled = currentPage === 1;
+    document.getElementById('nextPage').disabled = currentPage * articlesPerPage >= totalArticles;
 }
 
 function loadBlogPost() {
@@ -91,7 +102,10 @@ function loadBlogPost() {
                 document.getElementById('blog-date').textContent = `发布日期: ${article.date}`;
                 document.getElementById('blog-image').src = article.image;
                 document.getElementById('blog-content').textContent = article.content;
+            } else {
+                document.getElementById('blog-content').innerText = '未找到相关文章。';
             }
         })
         .catch(error => console.error('加载文章时出错:', error));
 }
+
