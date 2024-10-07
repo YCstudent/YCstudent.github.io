@@ -29,12 +29,12 @@
 
     <footer id="contact">
         <p>© 2024 JHCx330个人博客 | 联系我:</p>
-        qq邮箱: <a href="mailto:2917321268@qq.com">2917321268@qq.com</a></p>
-        Gmail: <a href="mailto:jjhcx330jinheng@gmail.com">jjhcx330jinheng@gmail.com</a></p>
-    <p>电话: <a href="tel:+13613763761">+13613763761</a></p>
-    <p>社交媒体:
-        <a href="https://space.bilibili.com/449130440" target="_blank">bilibili</a> 
-    </p>
+        <p>qq邮箱: <a href="mailto:2917321268@qq.com">2917321268@qq.com</a></p>
+        <p>Gmail: <a href="mailto:jjhcx330jinheng@gmail.com">jjhcx330jinheng@gmail.com</a></p>
+        <p>电话: <a href="tel:+13613763761">+13613763761</a></p>
+        <p>社交媒体: 
+            <a href="https://space.bilibili.com/449130440" target="_blank">bilibili</a>
+        </p>
     </footer>
 
     <script>
@@ -46,10 +46,15 @@
                 .then(data => {
                     const article = data.articles.find(a => a.id == articleId);
                     if (article) {
+                        let imageHtml = '';
+                        article.images.forEach(image => {
+                            imageHtml += `<img src="${image}" alt="${article.title}" />`;
+                        });
+
                         document.getElementById('article').innerHTML = `
                             <h2>${article.title}</h2>
                             <p class="date">发布日期: ${article.date}</p>
-                            <img src="${article.image}" alt="${article.title}" />
+                            ${imageHtml}
                             <p>${article.content}</p>
                         `;
                     } else {
