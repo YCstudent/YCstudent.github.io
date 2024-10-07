@@ -71,15 +71,15 @@ function displayArticles() {
     }
 
     paginatedArticles.forEach(article => {
-        articlesSection.innerHTML += 
+        articlesSection.innerHTML += `
             <div class="article">
                 <h2>${article.title}</h2>
                 <p class="date">发布日期: ${article.date}</p>
-                <img src="${article.image}" alt="${article.title}" />
+                <img src="${article.image}" alt="${article.title}" loading="lazy" />
                 <p>${article.content.substring(0, 100)}...</p>
                 <a href="blog.html?id=${article.id}">阅读更多</a>
             </div>
-        ;
+        `;
     });
 }
 
@@ -87,9 +87,9 @@ function displayArticles() {
 function loadPhotos(photos) {
     const carouselContainer = document.querySelector('.carousel-container');
     photos.forEach(photo => {
-        carouselContainer.innerHTML += 
-            <img src="${photo.src}" alt="${photo.alt}">
-        ;
+        carouselContainer.innerHTML += `
+            <img src="${photo.src}" alt="${photo.alt}" loading="lazy">
+        `;
     });
 }
 
@@ -110,6 +110,7 @@ function setupCarousel() {
         }
     }, scrollInterval);
 }
+
 
 
 
