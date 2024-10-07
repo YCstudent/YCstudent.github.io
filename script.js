@@ -39,16 +39,31 @@ document.addEventListener('DOMContentLoaded', () => {
             photoWall.scrollIntoView({ behavior: 'smooth' });
         }
     });
+
+    // 模态框关闭事件
+    document.querySelector('.close').addEventListener('click', closeModal);
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') closeModal();
+    });
 });
 
 function loadData() {
+    showLoadingIndicator();
     fetch('data.json')
-        .then(response => response.json())
+        .then(response => {
+            if (!response.ok) throw new Error('网络错误');
+            return response.json();
+        })
         .then(data => {
             allArticles = data.articles.sort((a, b) => b.id - a.id);
+            totalArticles = allArticles.length; // 更新总文章数
             displayArticles();
         })
-        .catch(error => console.error('加载数据时出错:', error));
+        .catch(error => {
+            console.error('加载数据时出错:', error);
+            alert('加载数据失败，请稍后再试。');
+        })
+        .finally(() => hideLoadingIndicator());
 }
 
 function displayArticles() {
@@ -74,7 +89,7 @@ function displayArticles() {
         articleDiv.innerHTML = `
             <h2>${article.title}</h2>
             <p class="date">发布日期: ${article.date}</p>
-            <img src="${article.image}" alt="${article.title}" />
+            <img src="${article.image}" alt="${article.title}" onclick="openModal('${article.image}')"/>
             <p>${article.content.substring(0, 100)}...</p>
             <a href="blog.html?id=${article.id}">阅读更多</a>
         `;
@@ -89,23 +104,28 @@ function updatePaginationButtons() {
     document.getElementById('nextPage').disabled = currentPage * articlesPerPage >= totalArticles;
 }
 
-function loadBlogPost() {
-    const params = new URLSearchParams(window.location.search);
-    const articleId = params.get('id');
-
-    fetch('data.json')
-        .then(response => response.json())
-        .then(data => {
-            const article = data.articles.find(article => article.id == articleId);
-            if (article) {
-                document.getElementById('blog-title').textContent = article.title;
-                document.getElementById('blog-date').textContent = `发布日期: ${article.date}`;
-                document.getElementById('blog-image').src = article.image;
-                document.getElementById('blog-content').textContent = article.content;
-            } else {
-                document.getElementById('blog-content').innerText = '未找到相关文章。';
-            }
-        })
-        .catch(error => console.error('加载文章时出错:', error));
+// 打开模态框
+function openModal(imageSrc) {
+    const modal = document.getElementById('photo-modal');
+    const modalImage = document.getElementById('modal-image');
+    modalImage.src = imageSrc;
+    modal.classList.remove('hidden');
 }
+
+// 关闭模态框
+function closeModal() {
+    const modal = document.getElementById('photo-modal');
+    modal.classList.add('hidden');
+}
+
+// 显示加载指示器
+function showLoadingIndicator() {
+    // 可添加加载动画逻辑
+}
+
+// 隐藏加载指示器
+function hideLoadingIndicator() {
+    // 可添加隐藏加载动画逻辑
+}
+
 
