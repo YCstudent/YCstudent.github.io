@@ -66,60 +66,6 @@ nav ul li a:hover {
     height: 150px;
     object-fit: cover;
     border-radius: 10px;
-    transition: transform 0.3s ease;
-}
-
-.photo-grid img:hover {
-    transform: scale(1.05);
-}
-
-
-    <!-- 模态框结构 -->
-    <div id="photo-modal" class="modal hidden">
-        <span class="close">&times;</span>
-        <img class="modal-content" id="modal-image">
-    </div>
-
-    <script src="script.js"></script>
-</body>
-</html>
-2. CSS：
-css
-复制代码
-/* 基础样式 */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
-    margin: 0;
-    padding: 0;
-}
-
-header {
-    text-align: center;
-    padding: 20px;
-    background-color: #4CAF50;
-    color: white;
-}
-
-/* 照片墙样式 */
-#photo-wall {
-    padding: 20px;
-    text-align: center;
-}
-
-.photo-grid {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    flex-wrap: wrap;
-}
-
-.photo-grid img {
-    width: 200px;
-    height: 150px;
-    object-fit: cover;
-    border-radius: 10px;
     cursor: pointer;
     transition: transform 0.3s ease;
 }
@@ -155,25 +101,10 @@ header {
     font-size: 40px;
     cursor: pointer;
 }
+
 /* 隐藏照片墙 */
 .hidden {
     display: none;
-}
-
-.carousel-container {
-    display: flex;
-    overflow-x: auto;
-    gap: 15px;
-    scroll-behavior: smooth;
-}
-
-.carousel-container img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-    flex-shrink: 0;
-    width: 100%;
-    max-width: 300px;
 }
 
 /* 分类部分 */
@@ -257,24 +188,6 @@ header {
 
 .article-list .article a:hover {
     text-decoration: underline;
-}
-
-/* 单篇文章详情页面样式 */
-article img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px; /* 图片圆角 */
-    margin-bottom: 20px; /* 图片与文字的间距 */
-}
-
-article h2 {
-    font-size: 2em;
-    margin: 20px 0;
-}
-
-article p {
-    font-size: 1.2em;
-    line-height: 1.6;
 }
 
 /* 翻页按钮 */
