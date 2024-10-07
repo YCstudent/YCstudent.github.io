@@ -1,5 +1,5 @@
 let currentPage = 1;
-const articlesPerPage = 2;
+const articlesPerPage = 5; // 每页显示5篇文章
 let totalArticles = 0;
 
 document.addEventListener('DOMContentLoaded', () => {
