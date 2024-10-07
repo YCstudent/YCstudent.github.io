@@ -48,20 +48,6 @@
             "category": "生活感悟",
             "image": "images/sunset.jpg"
         }
-    ],
-    "photos": [
-        {
-            "src": "images/featured1.jpg",
-            "alt": "特色图片1"
-        },
-        {
-            "src": "images/featured2.jpg",
-            "alt": "特色图片2"
-        },
-        {
-            "src": "images/featured3.jpg",
-            "alt": "特色图片3"
-        }
     ]
 }
 
