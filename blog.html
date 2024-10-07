@@ -41,17 +41,21 @@
                 .then(data => {
                     const article = data.articles.find(a => a.id == articleId);
                     if (article) {
-                        document.getElementById('article').innerHTML = `
+                        const articleContent = `
                             <h2>${article.title}</h2>
                             <p class="date">发布日期: ${article.date}</p>
-                            <img src="${article.image}" alt="${article.title}" />
+                            ${article.image ? `<img src="${article.image}" alt="${article.title}" />` : ''}
                             <p>${article.content}</p>
                         `;
+                        document.getElementById('article').innerHTML = articleContent;
                     } else {
                         document.getElementById('article').innerHTML = '<p>文章未找到。</p>';
                     }
                 })
-                .catch(error => console.error('加载文章时出错:', error));
+                .catch(error => {
+                    document.getElementById('article').innerHTML = '<p>加载文章时出错，请稍后再试。</p>';
+                    console.error('加载文章时出错:', error);
+                });
         });
     </script>
 </body>
