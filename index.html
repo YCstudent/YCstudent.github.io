@@ -3,65 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>个人博客</title>
+    <title>个人博客 - 主页</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">首页</a></li>
-                <li><a href="blog.html">博客</a></li>
-                <li><a href="#categories">分类</a></li>
-                <li><a href="#contact">联系我</a></li>
-            </ul>
-        </nav>
-        <div class="hero">
-            <h1>欢迎来到我的个人博客</h1>
-            <p>分享我的生活和感悟</p>
-        </div>
+        <h1>欢迎来到我的个人博客</h1>
     </header>
 
-    <!-- 图片轮播部分 -->
-    <section id="carousel">
-        <div class="carousel-container">
-            <img src="images/featured1.jpg" alt="特色图片1">
-            <img src="images/featured2.jpg" alt="特色图片2">
-            <img src="images/featured3.jpg" alt="特色图片3">
-        </div>
+    <!-- 图片轮播 -->
+    <div class="carousel">
+        <img src="images/slide1.jpg" alt="轮播图片1" class="carousel-img">
+        <img src="images/slide2.jpg" alt="轮播图片2" class="carousel-img">
+        <img src="images/slide3.jpg" alt="轮播图片3" class="carousel-img">
+        <button id="pauseCarousel">暂停</button>
+        <button id="resumeCarousel">继续</button>
+    </div>
+
+    <!-- 分类导航 -->
+    <nav>
+        <ul class="category-list">
+            <li><a href="#" data-category="all">全部</a></li>
+            <li><a href="#" data-category="技术">技术</a></li>
+            <li><a href="#" data-category="生活">生活</a></li>
+            <li><a href="#" data-category="旅行">旅行</a></li>
+        </ul>
+    </nav>
+
+    <!-- 文章列表 -->
+    <section class="article-list">
+        <!-- 文章将动态加载 -->
     </section>
 
-    <!-- 分类部分 -->
-    <section id="categories">
-        <h2>文章分类</h2>
-        <div class="category-list">
-            <div class="category" data-category="编程">编程</div>
-            <div class="category" data-category="旅行">旅行</div>
-            <div class="category" data-category="生活感悟">生活感悟</div>
-            <div class="category" data-category="摄影">摄影</div>
-        </div>
-    </section>
+    <!-- 分页按钮 -->
+    <div class="pagination">
+        <button id="prevPage">上一页</button>
+        <span id="currentPage"></span>
+        <button id="nextPage">下一页</button>
+    </div>
 
-    <main>
-        <section id="articles">
-            <h2>最新文章</h2>
-            <div class="article-list">
-                <!-- JavaScript 会动态加载文章摘要 -->
-            </div>
-            <div id="pagination">
-                <button id="prevPage">上一页</button>
-                <button id="nextPage">下一页</button>
-            </div>
-        </section>
-    </main>
-
-    <footer id="contact">
-        <p>© 2024 个人博客 | 联系我: <a href="mailto:youremail@example.com">youremail@example.com</a></p>
+    <!-- 联系方式 -->
+    <footer>
+        <h3>联系我</h3>
+        <p>电子邮件: <a href="mailto:yourname@example.com">yourname@example.com</a></p>
+        <p>电话: <a href="tel:+123456789">+123456789</a></p>
+        <p>社交媒体: 
+            <a href="https://twitter.com/yourprofile" target="_blank">Twitter</a> | 
+            <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
+        </p>
     </footer>
 
     <script src="script.js"></script>
 </body>
 </html>
+
 
 
 
