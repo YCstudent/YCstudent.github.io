@@ -1,5 +1,5 @@
 let currentPage = 1;
-const articlesPerPage = 5; // 每页显示5篇文章
+const articlesPerPage = 5;
 let totalArticles = 0;
 let allArticles = [];
 let currentCategory = null;
@@ -21,12 +21,11 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // 分类点击事件
     document.querySelectorAll('.category').forEach(category => {
         category.addEventListener('click', () => {
             const selectedCategory = category.getAttribute('data-category');
             if (currentCategory === selectedCategory) {
-                currentCategory = null; // 取消过滤
+                currentCategory = null;
             } else {
                 currentCategory = selectedCategory;
             }
@@ -36,21 +35,17 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-// 加载数据
 function loadData() {
     fetch('data.json')
         .then(response => response.json())
         .then(data => {
-            allArticles = data.articles;
+            allArticles = data.articles.sort((a, b) => b.id - a.id);
             totalArticles = allArticles.length;
             displayArticles();
-            loadPhotos(data.photos);
-            setupCarousel();
         })
         .catch(error => console.error('加载数据时出错:', error));
 }
 
-// 显示文章
 function displayArticles() {
     let filteredArticles = allArticles;
     if (currentCategory) {
@@ -75,7 +70,7 @@ function displayArticles() {
             <div class="article">
                 <h2>${article.title}</h2>
                 <p class="date">发布日期: ${article.date}</p>
-                <img src="${article.image}" alt="${article.title}" loading="lazy" />
+                <img src="${article.image}" alt="${article.title}" />
                 <p>${article.content.substring(0, 100)}...</p>
                 <a href="blog.html?id=${article.id}">阅读更多</a>
             </div>
@@ -83,34 +78,20 @@ function displayArticles() {
     });
 }
 
-// 加载照片
-function loadPhotos(photos) {
-    const carouselContainer = document.querySelector('.carousel-container');
-    photos.forEach(photo => {
-        carouselContainer.innerHTML += `
-            <img src="${photo.src}" alt="${photo.alt}" loading="lazy">
-        `;
-    });
+function loadBlogPost() {
+    const params = new URLSearchParams(window.location.search);
+    const articleId = params.get('id');
+
+    fetch('data.json')
+        .then(response => response.json())
+        .then(data => {
+            const article = data.articles.find(article => article.id == articleId);
+            if (article) {
+                document.getElementById('blog-title').textContent = article.title;
+                document.getElementById('blog-date').textContent = `发布日期: ${article.date}`;
+                document.getElementById('blog-image').src = article.image;
+                document.getElementById('blog-content').textContent = article.content;
+            }
+        })
+        .catch(error => console.error('加载文章时出错:', error));
 }
-
-// 设置图片轮播（简单的自动滚动）
-function setupCarousel() {
-    const carousel = document.querySelector('.carousel-container');
-    let scrollAmount = 0;
-    const scrollStep = 2;
-    const scrollInterval = 20; // 毫秒
-
-    setInterval(() => {
-        if (scrollAmount >= carousel.scrollWidth - carousel.clientWidth) {
-            scrollAmount = 0;
-            carousel.scrollTo({ left: scrollAmount, behavior: 'smooth' });
-        } else {
-            scrollAmount += scrollStep;
-            carousel.scrollTo({ left: scrollAmount, behavior: 'smooth' });
-        }
-    }, scrollInterval);
-}
-
-
-
-
