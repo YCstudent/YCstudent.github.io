@@ -8,11 +8,30 @@
 </head>
 <body>
     <header>
-        <h1>文章详情</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">首页</a></li>
+                <li><a href="blog.html">博客</a></li>
+                <li><a href="#categories">分类</a></li>
+                <li><a href="#contact">联系我</a></li>
+            </ul>
+        </nav>
+        <div class="hero">
+            <h1>文章详情</h1>
+            <p>查看完整内容</p>
+        </div>
     </header>
+
     <main>
-        <article id="article"></article>
+        <article id="article">
+            <!-- JavaScript 会动态加载文章详情 -->
+        </article>
     </main>
+
+    <footer id="contact">
+        <p>© 2024 个人博客 | 联系我: <a href="mailto:youremail@example.com">youremail@example.com</a></p>
+    </footer>
+
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const urlParams = new URLSearchParams(window.location.search);
@@ -24,7 +43,7 @@
                     if (article) {
                         document.getElementById('article').innerHTML = `
                             <h2>${article.title}</h2>
-                            <p>${article.date}</p>
+                            <p class="date">发布日期: ${article.date}</p>
                             <img src="${article.image}" alt="${article.title}" />
                             <p>${article.content}</p>
                         `;
@@ -37,6 +56,7 @@
     </script>
 </body>
 </html>
+
 
 
 
