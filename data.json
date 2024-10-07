@@ -1,0 +1,25 @@
+{
+  "articles": [
+    {
+      "id": 1,
+      "title": "今天的感悟",
+      "content": "今天是美好的一天，我学到了很多关于编程的知识！",
+      "date": "2024-10-06",
+      "image": "images/sunset.jpg"
+    },
+    {
+      "id": 2,
+      "title": "一次难忘的旅行",
+      "content": "这次旅行给我留下了深刻的印象，我拍摄了很多美丽的照片。",
+      "date": "2024-09-15",
+      "image": "images/mountain.jpg"
+    },
+    {
+      "id": 3,
+      "title": "编程挑战",
+      "content": "今天的编程挑战很有趣，我学到了很多新的技巧。",
+      "date": "2024-09-10",
+      "image": "images/coding.jpg"
+    }
+  ]
+}
