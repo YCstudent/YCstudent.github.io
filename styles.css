@@ -1,121 +1,48 @@
-/* 全局样式 */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-}
-
-header {
-    background-color: #333;
-    color: white;
-    padding: 20px;
-    text-align: center;
-}
-
-/* 图片轮播 */
-.carousel {
-    position: relative;
-    width: 100%;
-    height: 300px;
-    overflow: hidden;
-}
-
-.carousel-img {
-    width: 100%;
-    height: 100%;
-    display: none;
-}
-
-/* 按钮样式 */
-button {
-    padding: 10px 15px;
-    margin: 5px;
-    border: none;
-    background-color: #007bff;
-    color: white;
-    cursor: pointer;
-    border-radius: 5px;
-}
-
-button:disabled {
-    background-color: #ccc;
-}
-
-/* 文章列表样式 */
-.article-list {
-    padding: 20px;
-}
-
-.article {
-    background-color: white;
-    margin: 20px 0;
-    padding: 15px;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.article h2 {
-    margin-top: 0;
-}
-
-.article img {
-    max-width: 100%;
-    height: auto;
-    margin-top: 10px;
-}
-
-/* 分页按钮 */
-.pagination {
-    text-align: center;
-    margin: 20px 0;
-}
-
-/* 文章详情页样式 */
-.blog-post {
-    padding: 20px;
-}
-
-.blog-post img {
-    max-width: 100%;
-    height: auto;
-}
-
-/* 分类导航 */
-.category-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-}
-
-.category-list li {
-    margin: 0 15px;
-}
-
-.category-list a {
-    text-decoration: none;
-    color: #333;
-    font-weight: bold;
-}
-
-/* 页脚样式 */
-footer {
-    background-color: #333;
-    color: white;
-    padding: 20px;
-    text-align: center;
-    margin-top: 40px;
-}
-
-footer a {
-    color: #007bff;
-    text-decoration: none;
-}
-
-footer a:hover {
+/* 导航栏悬停效果 */
+nav ul li a:hover {
+    color: #ddd;
     text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+/* 按钮悬停效果 */
+#pagination button:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+/* 分类悬停效果 */
+.category:hover {
+    background-color: #4CAF50;
+    color: white;
+    transform: scale(1.1);
+    transition: all 0.3s ease;
+}
+
+/* 文章卡片悬停效果 */
+article:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+/* 自定义光标 */
+nav ul li a {
+    cursor: pointer;
+}
+
+button {
+    cursor: pointer;
+}
+
+.category {
+    cursor: pointer;
+}
+
+article {
+    cursor: pointer;
 }
 
 
