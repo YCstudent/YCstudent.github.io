@@ -17,14 +17,13 @@ main {
 
 #articles {
     display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
+    flex-direction: column; /* 修改为垂直方向排列 */
+    gap: 20px; /* 控制每篇文章之间的间距 */
 }
 
 article {
     border: 1px solid #ddd;
-    padding: 10px;
-    width: 30%;
+    padding: 15px;
 }
 
 article img {
@@ -42,6 +41,7 @@ article img {
     margin: 5px;
     cursor: pointer;
 }
+
 
 
 
