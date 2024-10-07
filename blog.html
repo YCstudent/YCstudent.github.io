@@ -3,33 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>博客详情</title>
+    <title>文章详情</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="blog-post">
-        <h1 class="article-title">文章标题</h1>
-        <p class="article-date">发布日期</p>
-        <img class="article-image" src="" alt="文章图片" style="display: none;">
-        <div class="article-content">
-            文章内容
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">首页</a></li>
+                <li><a href="blog.html">博客</a></li>
+                <li><a href="#categories">分类</a></li>
+                <li><a href="#contact">联系我</a></li>
+            </ul>
+        </nav>
+        <div class="hero">
+            <h1>文章详情</h1>
+            <p>查看完整内容</p>
         </div>
-    </div>
+    </header>
 
-    <!-- 联系方式 -->
-    <footer>
-        <h3>联系我</h3>
-        <p>电子邮件: <a href="mailto:yourname@example.com">yourname@example.com</a></p>
-        <p>电话: <a href="tel:+123456789">+123456789</a></p>
-        <p>社交媒体: 
-            <a href="https://twitter.com/yourprofile" target="_blank">Twitter</a> | 
-            <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
-        </p>
+    <main>
+        <article id="article">
+            <!-- JavaScript 会动态加载文章详情 -->
+        </article>
+    </main>
+
+    <footer id="contact">
+        <p>© 2024 个人博客 | 联系我: <a href="mailto:youremail@example.com">youremail@example.com</a></p>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const articleId = urlParams.get('id');
+            fetch('data.json')
+                .then(response => response.json())
+                .then(data => {
+                    const article = data.articles.find(a => a.id == articleId);
+                    if (article) {
+                        document.getElementById('article').innerHTML = `
+                            <h2>${article.title}</h2>
+                            <p class="date">发布日期: ${article.date}</p>
+                            <img src="${article.image}" alt="${article.title}" />
+                            <p>${article.content}</p>
+                        `;
+                    } else {
+                        document.getElementById('article').innerHTML = '<p>文章未找到。</p>';
+                    }
+                })
+                .catch(error => console.error('加载文章时出错:', error));
+        });
+    </script>
 </body>
 </html>
+
 
 
 
