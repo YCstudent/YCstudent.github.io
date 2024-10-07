@@ -36,12 +36,13 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-// 加载数据
+// 加载数据并按 id 降序排列
 function loadData() {
     fetch('data.json')
         .then(response => response.json())
         .then(data => {
-            allArticles = data.articles;
+            // 对文章按 id 降序排列
+            allArticles = data.articles.sort((a, b) => b.id - a.id);
             totalArticles = allArticles.length;
             displayArticles();
             loadPhotos(data.photos);
@@ -110,5 +111,6 @@ function setupCarousel() {
         }
     }, scrollInterval);
 }
+
 
 
