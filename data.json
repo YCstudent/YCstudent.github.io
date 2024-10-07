@@ -2,26 +2,65 @@
     "articles": [
         {
             "id": 1,
-            "title": "JavaScript 异步处理",
-            "content": "在本文中，我们将探讨 JavaScript 的异步处理方式，包括回调、Promise 和 Async/Await。",
+            "title": "今天的感悟",
+            "content": "今天是美好的一天，我学到了很多关于编程的知识！我还走了很多步，在户外享受了自然的美景。日子虽忙碌，但也充实。",
             "date": "2024-10-06",
-            "category": "技术",
-            "image": "./images/js_async.jpg"
+            "category": "生活感悟",
+            "image": "images/sunset.jpg"
         },
         {
             "id": 2,
-            "title": "我的旅行日记",
-            "content": "这是我最近一次旅行的精彩瞬间。从海边的日出到山顶的星空，一切都美不胜收。",
-            "date": "2024-10-07",
+            "title": "一次难忘的旅行",
+            "content": "这次旅行给我留下了深刻的印象，我参观了许多名胜古迹，体验了当地的文化和美食。特别是那座古老的城堡，它充满了历史感，仿佛带我回到了中世纪。",
+            "date": "2024-09-15",
             "category": "旅行",
-            "image": "./images/travel.jpg"
+            "image": "images/mountain.jpg"
         },
         {
             "id": 3,
-            "title": "简单生活的美",
-            "content": "简单的生活方式往往能带来最纯粹的快乐。",
-            "date": "2024-10-08",
-            "category": "生活"
+            "title": "编程挑战",
+            "content": "今天的编程挑战很有趣，我学到了很多新的技巧。解决了一些复杂的问题，感觉自己在不断进步。",
+            "date": "2024-09-10",
+            "category": "编程",
+            "image": "images/coding.jpg"
+        },
+        {
+            "id": 4,
+            "title": "摄影爱好",
+            "content": "最近我迷上了摄影，开始记录生活中的美好瞬间。无论是日常生活中的微小细节，还是偶遇的美丽风景，我都希望通过镜头记录下来，留作永恒的回忆。",
+            "date": "2024-08-25",
+            "category": "摄影",
+            "image": "images/city.jpg"
+        },
+        {
+            "id": 5,
+            "title": "学习新技术",
+            "content": "在编程的路上，不断学习新技术是非常重要的。今天我学习了如何使用React框架，感觉非常有趣且实用。",
+            "date": "2024-07-20",
+            "category": "编程",
+            "image": "images/coding.jpg"
+        },
+        {
+            "id": 6,
+            "title": "家庭聚会",
+            "content": "与家人共度了一个愉快的周末，享受了一顿美味的晚餐。家庭的温暖让我感到非常幸福。",
+            "date": "2024-07-15",
+            "category": "生活感悟",
+            "image": "images/sunset.jpg"
+        }
+    ],
+    "photos": [
+        {
+            "src": "images/featured1.jpg",
+            "alt": "特色图片1"
+        },
+        {
+            "src": "images/featured2.jpg",
+            "alt": "特色图片2"
+        },
+        {
+            "src": "images/featured3.jpg",
+            "alt": "特色图片3"
         }
     ]
 }
