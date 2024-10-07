@@ -190,6 +190,13 @@ nav ul li a:hover {
     text-decoration: underline;
 }
 
+/* 单篇文章详情页面样式 */
+article img {
+    max-width: 80%; /* 设置最大宽度为 80% */
+    height: auto; /* 自动调整高度保持比例 */
+    border-radius: 10px; /* 图片圆角 */
+    margin-bottom: 20px; /* 图片与文字的间距 */
+}
 /* 翻页按钮 */
 #pagination {
     text-align: center;
