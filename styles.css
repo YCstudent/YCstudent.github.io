@@ -76,7 +76,7 @@ nav ul li a:hover {
 
 /* 模态框样式 */
 .modal {
-    display: none;
+    display: block;
     position: fixed;
     z-index: 1;
     left: 0;
