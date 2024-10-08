@@ -27,6 +27,12 @@
         </article>
     </main>
 
+    <!-- 模态框结构 -->
+    <div id="photo-modal" class="modal hidden">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modal-image">
+    </div>
+
     <footer id="contact">
         <p>© 2024 JHCx330个人博客 | 联系我:</p>
         <p>qq邮箱: <a href="mailto:2917321268@qq.com">2917321268@qq.com</a></p>
@@ -48,7 +54,7 @@
                     if (article) {
                         let imageHtml = '';
                         article.images.forEach(image => {
-                            imageHtml += `<img src="${image}" alt="${article.title}" />`;
+                            imageHtml += `<img src="${image}" alt="${article.title}" onclick="openModal('${image}')"/>`;
                         });
 
                         document.getElementById('article').innerHTML = `
@@ -62,6 +68,24 @@
                     }
                 })
                 .catch(error => console.error('加载文章时出错:', error));
+
+            // 模态框相关逻辑
+            const modal = document.getElementById('photo-modal');
+            const modalImage = document.getElementById('modal-image');
+
+            document.querySelector('.close').addEventListener('click', closeModal);
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape') closeModal();
+            });
+
+            window.openModal = function(imageSrc) {
+                modalImage.src = imageSrc;
+                modal.classList.remove('hidden');
+            }
+
+            function closeModal() {
+                modal.classList.add('hidden');
+            }
         });
     </script>
 </body>
