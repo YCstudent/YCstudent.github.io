@@ -84,24 +84,23 @@ function displayArticles() {
     }
 
     paginatedArticles.forEach(article => {
-    const articleDiv = document.createElement('div');
-    articleDiv.classList.add('article');
-    
-    let imageHtml = '';
-    article.images.forEach(image => {
-        imageHtml += `<img src="${image}" alt="${article.title}" onclick="openModal('${image}')"/>`;
+        const articleDiv = document.createElement('div');
+        articleDiv.classList.add('article');
+        
+        let imageHtml = '';
+        article.images.forEach(image => {
+            imageHtml += `<img src="${image}" alt="${article.title}" onclick="openModal('${image}')"/>`;
+        });
+        
+        articleDiv.innerHTML = `
+            <h2>${article.title}</h2>
+            <p class="date">发布日期: ${article.date}</p>
+            ${imageHtml}
+            <p>${article.content.substring(0, 100)}...</p>
+            <a href="blog.html?id=${article.id}">阅读更多</a>
+        `;
+        articlesSection.appendChild(articleDiv);
     });
-    
-    articleDiv.innerHTML = `
-        <h2>${article.title}</h2>
-        <p class="date">发布日期: ${article.date}</p>
-        ${imageHtml}
-        <p>${article.content.substring(0, 100)}...</p>
-        <a href="blog.html?id=${article.id}">阅读更多</a>
-    `;
-    articlesSection.appendChild(articleDiv);
-});
-
 
     updatePaginationButtons();
 }
@@ -134,5 +133,3 @@ function showLoadingIndicator() {
 function hideLoadingIndicator() {
     // 可添加隐藏加载动画逻辑
 }
-
-
