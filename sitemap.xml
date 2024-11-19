@@ -20,15 +20,6 @@
   </url>
   
   <url>
-    <loc>https://ycstudent.github.io/comments/index.html</loc>
-    
-    <lastmod>2024-11-19</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://ycstudent.github.io/tags/index.html</loc>
     
     <lastmod>2024-11-18</lastmod>
@@ -155,6 +146,13 @@
 
   
   <url>
+    <loc>https://ycstudent.github.io/tags/%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95/</loc>
+    <lastmod>2024-11-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://ycstudent.github.io/tags/Markdown/</loc>
     <lastmod>2024-11-19</lastmod>
     <changefreq>weekly</changefreq>
@@ -168,24 +166,17 @@
     <priority>0.2</priority>
   </url>
   
-  <url>
-    <loc>https://ycstudent.github.io/tags/%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95/</loc>
-    <lastmod>2024-11-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
 
   
   <url>
-    <loc>https://ycstudent.github.io/categories/%E6%BC%94%E7%A4%BA/</loc>
+    <loc>https://ycstudent.github.io/categories/%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95/</loc>
     <lastmod>2024-11-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://ycstudent.github.io/categories/%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95/</loc>
+    <loc>https://ycstudent.github.io/categories/%E6%BC%94%E7%A4%BA/</loc>
     <lastmod>2024-11-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
