@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://ycstudent.github.io/life/music/index.html</loc>
+    
+    <lastmod>2024-11-20</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://ycstudent.github.io/personal/love/index.html</loc>
     
     <lastmod>2024-11-20</lastmod>
@@ -111,15 +120,6 @@
   
   <url>
     <loc>https://ycstudent.github.io/tags/index.html</loc>
-    
-    <lastmod>2024-11-18</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://ycstudent.github.io/life/music/index.html</loc>
     
     <lastmod>2024-11-18</lastmod>
     
