@@ -3407,10 +3407,10 @@ function createWinbox() {
 <h2>四、背景设置</h2>
 <center><button onclick="resetBg()" style="background:var(--theme-color);display:block;width:35%;padding:15px 0;border-radius:30px;color:white;"><i class="fa-solid fa-arrows-rotate"></i>&nbsp;恢复默认背景</button></center>
 
-<h3>1. 二次元</h3>
-<details class="folding-tag" cyan><summary> 查看二次元背景 </summary>
+<h3>1. 动漫&游戏</h3>
+<details class="folding-tag" cyan><summary> 查看动漫&游戏背景 </summary>
               <div class='content'>
-              <div class="bgbox"><a href="javascript:;" rel="noopener external nofollow" style="background-image:url(https://lskypro.acozycotage.net/Fomalhaut/img/home_bg.webp)" class="imgbox" onclick="changeBg('url(https://lskypro.acozycotage.net/Fomalhaut/img/home_bg.webp)')"></a></div>
+              <div class="bgbox"><a href="javascript:;" rel="noopener external nofollow" style="background-image:url(https://tuchuang.voooe.cn/images/2024/11/20/_20241120125529.jpg)" class="imgbox" onclick="changeBg('url(https://tuchuang.voooe.cn/images/2024/11/20/_20241120125529.jpg)')"></a><a href="javascript:;" rel="noopener external nofollow" style="background-image:url(https://tuchuang.voooe.cn/images/2024/11/20/_20241120125734.jpg)" class="imgbox" onclick="changeBg('url(https://tuchuang.voooe.cn/images/2024/11/20/_20241120125734.jpg)')"></a></div>
               </div>
             </details>
 
@@ -3451,7 +3451,7 @@ function createWinbox() {
 <h3>6. 适配手机</h3>
 <details class="folding-tag" cyan><summary> 查看适配手机的背景 </summary>
               <div class='content'>
-              <div class="bgbox"><a href="javascript:;" rel="noopener external nofollow" style="background-image:url(https://lskypro.acozycotage.net/Fomalhaut/img/mb4.webp)" class="pimgbox" onclick="changeBg('url(https://lskypro.acozycotage.net/Fomalhaut/img/mb4.webp)')"></a></div>
+              <div class="bgbox"><a href="javascript:;" rel="noopener external nofollow" style="background-image:url(https://tuchuang.voooe.cn/images/2024/11/20/_20241120123909.jpg)" class="pimgbox" onclick="changeBg('url(https://tuchuang.voooe.cn/images/2024/11/20/_20241120123909.jpg)')"></a><a href="javascript:;" rel="noopener external nofollow" style="background-image:url(https://tuchuang.voooe.cn/images/2024/11/20/_20241120125931.jpg)" class="pimgbox" onclick="changeBg('url(https://tuchuang.voooe.cn/images/2024/11/20/_20241120125931.jpg)')"></a><a href="javascript:;" rel="noopener external nofollow" style="background-image:url(https://tuchuang.voooe.cn/images/2024/11/20/_20241120130016.png)" class="pimgbox" onclick="changeBg('url(https://tuchuang.voooe.cn/images/2024/11/20/_20241120130016.png)')"></a><a href="javascript:;" rel="noopener external nofollow" style="background-image:url(https://tuchuang.voooe.cn/images/2024/11/20/_20241120130102.jpg)" class="pimgbox" onclick="changeBg('url(https://tuchuang.voooe.cn/images/2024/11/20/_20241120130102.jpg)')"></a></div>
               </div>
             </details>
 
