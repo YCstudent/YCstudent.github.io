@@ -6582,13 +6582,13 @@ blockquote.pullquote.right {
 /* 字体引入 */
 @font-face {
   font-family: YSHST;
-  src: url(https://data-static.netdun.net/Fomalhaut/fonts/优设好身体.woff2);
+  src: url(https://unpkg.zhimg.com/niaosu/font/haoshenti/haoshenti.woff2);
   font-display: swap;
 }
 
 @font-face {
   font-family: MiSans;
-  src: url(https://data-static.netdun.net/Fomalhaut/fonts/MiSans.woff2);
+  src: url(https://unpkg.zhimg.com/niaosu@3.3.2/font/xiaomi/MiSans.woff2);
   font-display: swap;
 }
 
