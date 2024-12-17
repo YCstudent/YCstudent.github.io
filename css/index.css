@@ -1367,7 +1367,7 @@ body {
   background: var(--global-bg);
   color: var(--font-color);
   font-size: var(--global-font-size);
-  font-family: var(--global-font), -apple-system, 'Quicksand', 'Nimbus Roman No9 L', 'PingFang SC', 'Hiragino Sans GB', 'Noto Serif SC', 'Microsoft Yahei', 'WenQuanYi Micro Hei', 'ST Heiti', sans-serif;;
+  font-family: var(--global-font), -apple-system, 'daziji', 'Nimbus Roman No9 L', 'MiSans', 'ChildFunSans', 'Microsoft Yahei', 'WenQuanYi Micro Hei', 'ST Heiti', sans-serif;;
   line-height: 2;
   -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
@@ -1497,7 +1497,7 @@ a:hover {
 #site-name,
 #aside-content .author-info__name,
 #aside-content .author-info__description {
-  font-family: var(--global-font);
+  font-family: daziji;
 }
 .is-center {
   text-align: center;
@@ -1671,7 +1671,7 @@ figure.highlight pre .javascript .function {
 #article-container pre,
 #article-container code {
   font-size: 14.5px;
-  font-family: Consolas_1, var(--global-font), "Microsoft YaHei", Menlo, "PingFang SC", "Microsoft JhengHei", sans-serif !important;
+  font-family: Consolas-1, var(--global-font), "Microsoft YaHei", Menlo, "PingFang SC", "Microsoft JhengHei", sans-serif !important;
 }
 #article-container code {
   padding: 2px 4px;
@@ -1974,7 +1974,7 @@ figure.highlight pre .javascript .function {
   height: 100%;
   vertical-align: top;
   text-align: center;
-  font-family: var(--global-font);
+  font-family: daziji;
 }
 @media screen and (max-width: 768px) {
   .error404 #error-wrap .error-content .error-info {
@@ -6539,20 +6539,20 @@ blockquote.pullquote.right {
 
 /* 字体引入 */
 @font-face {
-  font-family: YSHST;
-  src: url(https://unpkg.zhimg.com/niaosu/font/haoshenti/haoshenti.woff2);
+  font-family: daziji;
+  src: url(/assets/daziji.ttf);
   font-display: swap;
 }
 
 @font-face {
   font-family: MiSans;
-  src: url(https://unpkg.zhimg.com/niaosu@3.3.2/font/xiaomi/MiSans.woff2);
+  src: url(/assets/MiSans-Normal.woff2);
   font-display: swap;
 }
 
 @font-face {
-  font-family: HYTMR;
-  src: url(https://data-static.netdun.net/Fomalhaut/fonts/HYTangMeiRen55W.woff2);
+  font-family: ChildFunSans;
+  src: url(/assets/ChildFunSans.ttf);
   font-display: swap;
 }
 
@@ -6569,8 +6569,8 @@ blockquote.pullquote.right {
 }
 
 @font-face {
-  font-family: Consolas_1;
-  src: url(https://data-static.netdun.net/Fomalhaut/fonts/Consolas.woff2);
+  font-family: Consolas-1;
+  src: url(/assets/consola-1.ttf);
   font-display: swap;
 }
 

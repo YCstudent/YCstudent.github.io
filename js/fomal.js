@@ -1,5 +1,5 @@
 /* 阅读进度 start */
-document.addEventListener('pjax:complete', function () {
+document.addEventListener('pax:complete', function () {
   window.onscroll = percent;
 });
 document.addEventListener('DOMContentLoaded', function () {
@@ -3381,7 +3381,9 @@ function createWinbox() {
 <div class="note warning modern"><p>非商免字体未经授权只能个人使用。本站为完全非商业、非盈利性质的网站，平时用于个人学习交流，如有侵权请联系站长删除，谢谢！ —— 致版权方</p>
 </div>
 <p id="swfs">
-<a class="swf" id="swf_MiSans" href="javascript:;" rel="noopener external nofollow" style="font-family:'MiSans'!important;color:black" onclick="setFont('MiSans')">加粗一点点</a>
+<a class="swf" id="swf_MiSans" href="javascript:;" rel="noopener external nofollow" style="font-family:'ChildFunSans'!important;color:black" onclick="setFont('ChildFunSans')">游趣体</a>
+<a class="swf" id="swf_MiSans" href="javascript:;" rel="noopener external nofollow" style="font-family:'daziji'!important;color:black" onclick="setFont('daziji')">香萃打字机体</a>
+<a class="swf" id="swf_MiSans" href="javascript:;" rel="noopener external nofollow" style="font-family:'MiSans'!important;color:black" onclick="setFont('MiSans')">MiSans</a>
 <a class="swf" id="swf_default" href="javascript:;" rel="noopener external nofollow" style="font-family:-apple-system, IBM Plex Mono ,monosapce,'微软雅黑', sans-serif;!important;color:black" onclick="setFont('default')">系统默认</a>
 </p>
 
