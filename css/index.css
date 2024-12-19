@@ -7607,7 +7607,7 @@ button#go-up:hover #percent {
 }
 
 /* 侧边栏个人信息卡片动态渐变色 */
-#aside-content > .card-widget.card-info {
+/*#aside-content > .card-widget.card-info {
   background: linear-gradient(
     -45deg,
     #e8d8b9,
@@ -7655,17 +7655,17 @@ button#go-up:hover #percent {
   100% {
     background-position: 0% 50%;
   }
-} 
+} */
 
 /* 个人信息卡片背景图 */
 [data-theme="light"] #aside-content > .card-widget.card-info {
-  background-image: url(https://tuchuang.voooe.cn/images/2024/12/19/_20241219220830.jpg);
+  background-image: url(https://tuchuang.voooe.cn/images/2024/12/19/_20241219221818.jpg);
   background-repeat: no-repeat;
   background-attachment: inherit;
   background-size: 100%;
 }
 [data-theme="dark"] #aside-content > .card-widget.card-info {
-  background-image: url(https://tuchuang.voooe.cn/images/2024/12/19/_20241219220830.jpg);
+  background-image: url(https://tuchuang.voooe.cn/images/2024/12/19/_20241219221245.jpg);
   background-repeat: no-repeat;
   background-attachment: inherit;
   background-size: 100%;
