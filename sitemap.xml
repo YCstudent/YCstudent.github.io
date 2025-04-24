@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://jhcx330.com/posts/ets_articlecomparison.html</loc>
+    
+    <lastmod>2025-04-20</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://jhcx330.com/posts/report_writing.html</loc>
     
     <lastmod>2024-12-19</lastmod>
@@ -166,50 +175,50 @@
 
   <url>
     <loc>https://jhcx330.com/</loc>
-    <lastmod>2025-04-14</lastmod>
+    <lastmod>2025-04-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
 
   
   <url>
-    <loc>https://jhcx330.com/tags/Writing/</loc>
-    <lastmod>2025-04-14</lastmod>
+    <loc>https://jhcx330.com/tags/Reading/</loc>
+    <lastmod>2025-04-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://jhcx330.com/tags/English/</loc>
-    <lastmod>2025-04-14</lastmod>
+    <lastmod>2025-04-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://jhcx330.com/tags/ETS/</loc>
-    <lastmod>2025-04-14</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://jhcx330.com/tags/Reading/</loc>
-    <lastmod>2025-04-14</lastmod>
+    <lastmod>2025-04-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://jhcx330.com/tags/Markdown/</loc>
-    <lastmod>2025-04-14</lastmod>
+    <lastmod>2025-04-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://jhcx330.com/tags/%E5%A4%96%E6%8C%82%E6%A0%87%E7%AD%BE/</loc>
-    <lastmod>2025-04-14</lastmod>
+    <lastmod>2025-04-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://jhcx330.com/tags/Writing/</loc>
+    <lastmod>2025-04-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -218,14 +227,14 @@
   
   <url>
     <loc>https://jhcx330.com/categories/ETS/</loc>
-    <lastmod>2025-04-14</lastmod>
+    <lastmod>2025-04-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://jhcx330.com/categories/%E6%BC%94%E7%A4%BA/</loc>
-    <lastmod>2025-04-14</lastmod>
+    <lastmod>2025-04-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
