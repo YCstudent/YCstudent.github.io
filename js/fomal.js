@@ -675,7 +675,7 @@ if (document.body.clientWidth > 992) {
         borderRadius: 5 + 'px',
         right: 55.6 + 'px',
         nekoImg: "https://bu.dusays.com/2022/07/20/62d812db74be9.png",
-        hoverMsg: "春天啦~",
+        hoverMsg: "夏天啦~",
         color: "var(--theme-color)",
         during: 500,
         blog_body: "body",
@@ -3177,8 +3177,8 @@ if (localStorage.getItem("blogbg") != undefined) {
   setBg(localStorage.getItem("blogbg"));
 } else {
   document.getElementById("defineBg").innerText = `:root{
-    --default-bg: url(https://tuchuang.voooe.cn/images/2025/04/14/97a6ee1a413389de7cb9c5dc5e3b913e.jpg);
-    --darkmode-bg:url(https://tuchuang.voooe.cn/images/2025/04/14/4942d10c9b2f16fe4c7f4a4872cb5a87.jpg);
+    --default-bg: url(https://tuchuang.voooe.cn/images/2025/06/02/-2025-06-02-215950.png);
+    --darkmode-bg:url(https://tuchuang.voooe.cn/images/2025/06/02/-2025-06-02-220723.png);
     --mobileday-bg: url(https://tuchuang.voooe.cn/images/2024/12/29/v2-97e2237bca463b81495bdace201b384f_r.jpg);
     --mobilenight-bg: url(https://tuchuang.voooe.cn/images/2024/12/29/73316471_p0_master1200.jpg);
   }`;
@@ -3384,7 +3384,6 @@ function createWinbox() {
 <a class="swf" id="swf_MiSans" href="javascript:;" rel="noopener external nofollow" style="font-family:'ChildFunSans'!important;color:black" onclick="setFont('ChildFunSans')">游趣体</a>
 <a class="swf" id="swf_MiSans" href="javascript:;" rel="noopener external nofollow" style="font-family:'daziji'!important;color:black" onclick="setFont('daziji')">香萃打字机体</a>
 <a class="swf" id="swf_MiSans" href="javascript:;" rel="noopener external nofollow" style="font-family:'MiSans'!important;color:black" onclick="setFont('MiSans')">MiSans</a>
-<a class="swf" id="swf_default" href="javascript:;" rel="noopener external nofollow" style="font-family:-apple-system, IBM Plex Mono ,monosapce,'微软雅黑', sans-serif;!important;color:black" onclick="setFont('default')">系统默认</a>
 </p>
 
 <h2>三、主题色设置</h2>

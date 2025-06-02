@@ -1367,7 +1367,7 @@ body {
   background: var(--global-bg);
   color: var(--font-color);
   font-size: var(--global-font-size);
-  font-family: daziji, 'MiSans', 'ChildFunSans', 'Microsoft Yahei';
+  font-family: Misans, 'daziji', 'ChildFunSans';
   line-height: 2;
   -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
@@ -7773,7 +7773,7 @@ input#pic-link {
 
 /* heo 加载动画头像 */
 .loading-img {
-  background: url(https://tuchuang.voooe.cn/images/2025/04/14/_20250415011514.jpg)
+  background: url(https://tuchuang.voooe.cn/images/2025/06/02/_20250602222154.jpg)
     no-repeat center center;
   background-size: cover;
 }
