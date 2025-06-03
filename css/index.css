@@ -7510,7 +7510,7 @@ button#go-up:hover #percent {
 .el-input.el-input--small.el-input-group.el-input-group--prepend:nth-child(
     1
   ):before {
-  content: "输入QQ号会自动获取昵称和头像🐧";
+  content: "输入QQ号会自动获取头像🐧";
 }
 
 .el-input.el-input--small.el-input-group.el-input-group--prepend:nth-child(

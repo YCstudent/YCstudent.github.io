@@ -2,6 +2,24 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://jhcx330.com/site/time/index.html</loc>
+    
+    <lastmod>2025-06-03</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://jhcx330.com/personal/bb/index.html</loc>
+    
+    <lastmod>2025-06-03</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://jhcx330.com/life/games/index.html</loc>
     
     <lastmod>2025-06-03</lastmod>
@@ -56,15 +74,6 @@
   </url>
   
   <url>
-    <loc>https://jhcx330.com/site/time/index.html</loc>
-    
-    <lastmod>2024-12-17</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://jhcx330.com/life/movies/index.html</loc>
     
     <lastmod>2024-12-13</lastmod>
@@ -84,15 +93,6 @@
   
   <url>
     <loc>https://jhcx330.com/personal/about/index.html</loc>
-    
-    <lastmod>2024-12-11</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://jhcx330.com/personal/bb/index.html</loc>
     
     <lastmod>2024-12-11</lastmod>
     
@@ -191,6 +191,20 @@
 
   
   <url>
+    <loc>https://jhcx330.com/tags/Markdown/</loc>
+    <lastmod>2025-06-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://jhcx330.com/tags/%E5%A4%96%E6%8C%82%E6%A0%87%E7%AD%BE/</loc>
+    <lastmod>2025-06-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://jhcx330.com/tags/Reading/</loc>
     <lastmod>2025-06-03</lastmod>
     <changefreq>weekly</changefreq>
@@ -212,14 +226,7 @@
   </url>
   
   <url>
-    <loc>https://jhcx330.com/tags/Markdown/</loc>
-    <lastmod>2025-06-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://jhcx330.com/tags/%E5%A4%96%E6%8C%82%E6%A0%87%E7%AD%BE/</loc>
+    <loc>https://jhcx330.com/tags/Writing/</loc>
     <lastmod>2025-06-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -246,24 +253,17 @@
     <priority>0.2</priority>
   </url>
   
-  <url>
-    <loc>https://jhcx330.com/tags/Writing/</loc>
-    <lastmod>2025-06-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
 
   
   <url>
-    <loc>https://jhcx330.com/categories/ETS/</loc>
+    <loc>https://jhcx330.com/categories/%E6%BC%94%E7%A4%BA/</loc>
     <lastmod>2025-06-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://jhcx330.com/categories/%E6%BC%94%E7%A4%BA/</loc>
+    <loc>https://jhcx330.com/categories/ETS/</loc>
     <lastmod>2025-06-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>

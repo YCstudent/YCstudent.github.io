@@ -1,0 +1,230 @@
+/* 完整版：仅在原始样式基础上调整背景色（使用橙色半透明），以兼容白天/黑夜模式，文字与边框保留原有变量 */
+
+/* ---------- SparkLite 样式 ---------- */
+
+.post-SparkLite {
+    background: rgba(255, 152, 0, 0.08); /* 浅橙半透明背景 */
+    border-radius: 12px;
+    padding: 12px;
+    line-height: 1.3;
+    border: var(--style-border-always);
+    margin: 16px 0;
+}
+
+@media screen and (max-width: 768px) {
+    .post-SparkLite {
+        margin-top: 22px;
+    }
+}
+
+.sparkLite-title {
+    display: flex;
+    color: var(--efu-lighttext);
+    background: rgba(255, 152, 0, 0.25); /* 深橙半透明背景 */
+    border-radius: 8px;
+    align-items: center;
+    padding: 0 12px;
+    cursor: default;
+    user-select: none;
+}
+
+.sparkLite-title-text {
+    font-weight: bold;
+    margin-left: 8px;
+    line-height: 1;
+}
+
+.sparkLite-title-icon {
+    width: 20px;
+    height: 20px;
+}
+
+.sparkLite-title-icon svg {
+    width: 20px;
+    height: 20px;
+    fill: var(--efu-main);
+}
+
+.sparkLite-title-icon svg path {
+    fill: var(--efu-main);
+}
+
+.sparkLite-explanation {
+    margin-top: 12px;
+    padding: 8px 12px;
+    background: rgba(255, 152, 0, 0.04); /* 非常浅的橙半透明背景 */
+    border-radius: 8px;
+    border: var(--style-border-always);
+    font-size: 15px;
+    line-height: 1.4;
+    display: flex;
+}
+
+.sparkLite-tag {
+    font-size: 12px;
+    background-color: rgba(255, 152, 0, 0.25); /* 中等橙半透明背景 */
+    color: var(--efu-card-bg);
+    font-weight: bold;
+    border-radius: 4px;
+    margin-left: auto;
+    line-height: 1;
+    padding: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.sparkLite-tag:hover {
+    background: var(--efu-fontcolor);
+    color: var(--efu-card-bg);
+}
+
+/* ---------- tianliGPT 样式 ---------- */
+
+.tianliGPT-title {
+    display: flex;
+    color: var(--efu-lighttext);
+    background: rgba(255, 152, 0, 0.25); /* 深橙半透明背景 */
+    border-radius: 8px;
+    align-items: center;
+    padding: 0 12px;
+    cursor: default;
+    user-select: none;
+}
+
+.tianliGPT-title-text {
+    font-weight: bold;
+    margin-left: 8px;
+    line-height: 1;
+}
+
+.tianliGPT-title-icon {
+    width: 20px;
+    height: 20px;
+}
+
+.tianliGPT-title-icon svg {
+    width: 20px;
+    height: 20px;
+    fill: var(--efu-main);
+}
+
+.tianliGPT-title-icon svg path {
+    fill: var(--efu-main);
+}
+
+.tianliGPT-explanation {
+    margin-top: 12px;
+    padding: 8px 12px;
+    background: rgba(255, 152, 0, 0.04); /* 非常浅的橙半透明背景 */
+    border-radius: 8px;
+    border: var(--style-border-always);
+    font-size: 15px;
+    line-height: 1.4;
+    display: flex;
+}
+
+.tianliGPT-suggestions {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tianliGPT-suggestions .tianliGPT-suggestions-item {
+    margin-top: 12px;
+    padding: 8px 12px;
+    background: rgba(255, 152, 0, 0.06); /* 稍浅橙半透明背景 */
+    border-radius: 8px 8px 8px 0;
+    border: var(--style-border-always);
+    font-size: 15px;
+    line-height: 1.4;
+    display: flex;
+    width: fit-content;
+    margin-right: 12px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.tianliGPT-suggestions .tianliGPT-suggestions-item:hover {
+    background: var(--efu-main);
+    color: var(--efu-white);
+}
+
+.blinking-cursor {
+    background-color: var(--efu-main);
+    width: 10px;
+    height: 16px;
+    display: inline-block;
+    vertical-align: middle;
+    animation: blinking-cursor 0.5s infinite;
+    -webkit-animation: blinking-cursor 0.5s infinite;
+    margin-left: 4px;
+}
+
+@keyframes blinking-cursor {
+    0% {
+        opacity: 1;
+    }
+    40% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    90% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.tianliGPT-tag {
+    font-size: 12px;
+    background-color: rgba(255, 152, 0, 0.25); /* 中等橙半透明背景 */
+    color: var(--efu-card-bg);
+    font-weight: bold;
+    border-radius: 4px;
+    margin-left: auto;
+    line-height: 1;
+    padding: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.tianliGPT-tag:hover {
+    background: var(--efu-fontcolor);
+    color: var(--efu-card-bg);
+}
+
+/* 广告插入区保持原有样式，不修改背景 */
+ins.adsbygoogle {
+    margin: 16px 0;
+    background: var(--efu-card-bg);
+    border-radius: 12px;
+    overflow: hidden;
+    border: var(--style-border-always);
+}
+
+/* 切换按钮保持原有样式，不修改背景 */
+#tianliGPT-Toggle {
+    font-size: 12px;
+    background: var(--efu-lighttext);
+    color: var(--efu-card-bg);
+    padding: 4px;
+    border-radius: 4px;
+    margin-left: 6px;
+    transform: scale(0.8);
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight: bold;
+}
+
+#tianliGPT-Toggle:hover {
+    background: var(--efu-fontcolor);
+    color: var(--efu-card-bg);
+}
