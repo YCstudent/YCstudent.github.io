@@ -297,20 +297,24 @@ hr:before,
   object-fit: cover;
 }
 .list-beauty,
-.category-lists ul {
+.category-lists ul,
+#algolia-search .search-dialog .ais-Hits-list {
   list-style: none;
 }
 .list-beauty li,
-.category-lists ul li {
+.category-lists ul li,
+#algolia-search .search-dialog .ais-Hits-list li {
   position: relative;
   padding: 0.12em 0.4em 0.12em 1.4em;
 }
 .list-beauty li:hover:before,
-.category-lists ul li:hover:before {
+.category-lists ul li:hover:before,
+#algolia-search .search-dialog .ais-Hits-list li:hover:before {
   border-color: var(--pseudo-hover);
 }
 .list-beauty li:before,
-.category-lists ul li:before {
+.category-lists ul li:before,
+#algolia-search .search-dialog .ais-Hits-list li:before {
   position: absolute;
   top: 0.67em;
   left: 0;
@@ -8215,21 +8219,21 @@ a:hover {
 /* 帧率检测 */
 #fps {
   position: fixed;
-  left: 10px;
+  right: 10px;
   bottom: 10px;
   z-index: 1919810;
 }
 [data-theme="light"] #fps {
   background-color: rgba(255, 255, 255, 0.85);
   backdrop-filter: var(--backdrop-filter);
-  padding: 4px;
-  border-radius: 4px;
+  padding: 3px;
+  border-radius: 2px;
 }
 [data-theme="dark"] #fps {
   background-color: rgba(0, 0, 0, 0.72);
   backdrop-filter: var(--backdrop-filter);
-  padding: 4px;
-  border-radius: 4px;
+  padding: 3px;
+  border-radius: 2px;
 }
 
 /* 侧边栏 */
@@ -9515,6 +9519,272 @@ hr:before {
   transition: all 0.3s ease-in-out;
 }
 
+.search-dialog {
+  position: fixed;
+  top: 10%;
+  left: 50%;
+  z-index: 1001;
+  display: none;
+  margin-left: -300px;
+  padding: 20px;
+  width: 600px;
+  border-radius: 8px;
+  background: var(--search-bg);
+}
+@media screen and (max-width: 768px) {
+  .search-dialog {
+    top: 0;
+    left: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+  }
+}
+.search-dialog hr {
+  margin: 20px auto;
+}
+.search-dialog .search-nav {
+  margin: 0 0 14px;
+  color: #49b1f5;
+  font-size: 1.4em;
+  line-height: 1;
+}
+.search-dialog .search-nav .search-dialog-title {
+  margin-right: 10px;
+}
+.search-dialog .search-nav .search-close-button {
+  float: right;
+  color: #858585;
+  -webkit-transition: color 0.2s ease-in-out;
+  -moz-transition: color 0.2s ease-in-out;
+  -o-transition: color 0.2s ease-in-out;
+  -ms-transition: color 0.2s ease-in-out;
+  transition: color 0.2s ease-in-out;
+}
+.search-dialog .search-nav .search-close-button:hover {
+  color: #49b1f5;
+}
+#search-mask {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+  display: none;
+  background: rgba(0,0,0,0.6);
+}
+#algolia-search hr {
+  display: none;
+}
+#algolia-search .search-nav {
+  height: 40px;
+  margin: 0;
+}
+@media screen and (max-width: 768px) {
+  #algolia-search .search-dialog {
+    border: none;
+    border-radius: 0;
+  }
+}
+#algolia-search .search-dialog .ais-SearchBox .ais-SearchBox-form {
+  height: 35px;
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 10px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+}
+#algolia-search .search-dialog .ais-SearchBox .ais-SearchBox-form input {
+  padding: 0 14px;
+  height: 100%;
+  width: calc(100% - 50px);
+  outline: none;
+  border: 2px solid #49b1f5;
+  border-right: 0;
+  border-radius: 40px 0 0 40px;
+  background: transparent;
+  color: var(--search-input-color);
+}
+#algolia-search .search-dialog .ais-SearchBox .ais-SearchBox-form input::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+}
+#algolia-search .search-dialog .ais-SearchBox .ais-SearchBox-form button.ais-SearchBox-submit {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -o-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  -o-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  height: 100%;
+  width: 50px;
+  border: 2px solid var(--theme-color);
+  border-left: 0;
+  border-radius: 0 40px 40px 0;
+}
+#algolia-search .search-dialog .ais-SearchBox .ais-SearchBox-form button.ais-SearchBox-submit svg {
+  width: 50%;
+  height: 50%;
+}
+#algolia-search .search-dialog .ais-SearchBox .ais-SearchBox-form button.ais-SearchBox-submit svg path {
+  fill: var(--search-input-color);
+}
+#algolia-search .search-dialog .ais-SearchBox .ais-SearchBox-form button.ais-SearchBox-submit:hover svg path {
+  fill: var(--theme-color);
+}
+#algolia-search .search-dialog .ais-SearchBox .ais-SearchBox-form span.ais-SearchBox-loadingIndicator {
+  position: absolute;
+  left: 50%;
+  top: 93px;
+  -webkit-transform: translate(-50%);
+  -moz-transform: translate(-50%);
+  -o-transform: translate(-50%);
+  -ms-transform: translate(-50%);
+  transform: translate(-50%);
+}
+#algolia-search .search-dialog .ais-Hits-list {
+  margin: 0;
+  padding: 0;
+}
+#algolia-search .search-dialog .ais-Hits-list a {
+  color: var(--search-result-title);
+  font-weight: bold;
+}
+#algolia-search .search-dialog .ais-Hits-list a:hover {
+  color: #49b1f5;
+}
+#algolia-search .search-dialog .ais-Hits-list mark {
+  background: transparent;
+  color: #f47466;
+  font-weight: bold;
+}
+#algolia-search .search-dialog .algolia-hit-item-content {
+  margin: 0 0 5px;
+  word-break: break-all;
+}
+#algolia-search .search-dialog .ais-Pagination {
+  margin: 10px 0;
+  height: 35px;
+  padding: 0;
+  text-align: center;
+}
+#algolia-search .search-dialog .ais-Pagination .ais-Pagination-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+#algolia-search .search-dialog .ais-Pagination .ais-Pagination-item {
+  display: inline;
+  margin: 0 4px;
+  padding: 0;
+}
+#algolia-search .search-dialog .ais-Pagination .ais-Pagination-item .ais-Pagination-link {
+  display: inline-block;
+  min-width: 24px;
+  height: 24px;
+  text-align: center;
+  line-height: 24px;
+}
+#algolia-search .search-dialog .ais-Pagination .ais-Pagination-item--selected a {
+  background: var(--theme-color);
+  color: #eee;
+  cursor: default;
+  border-radius: 5px;
+}
+#algolia-search .search-dialog .ais-Pagination .ais-Pagination-item--disabled {
+  visibility: hidden;
+}
+#algolia-search .search-dialog .algolia-logo {
+  padding-top: 2px;
+  width: 80px;
+  height: 30px;
+}
+#algolia-search .search-dialog #algolia-hits > div {
+  overflow-y: scroll;
+}
+@media screen and (min-width: 768px) {
+  #algolia-search .search-dialog #algolia-hits > div {
+    max-height: calc(80vh - 240px);
+  }
+}
+@media screen and (max-width: 768px) {
+  #algolia-search .search-dialog #algolia-hits > div {
+    max-height: calc(100vh - 260px);
+  }
+}
+#algolia-search .search-dialog #algolia-info {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  -webkit-box-pack: justify;
+  -moz-box-pack: justify;
+  -o-box-pack: justify;
+  -ms-flex-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -o-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  height: 30px;
+}
+#algolia-search .search-dialog #algolia-info .algolia-stats {
+  font-size: 14px;
+}
+#algolia-search .search-dialog #algolia-info .algolia-poweredBy .ais-PoweredBy a {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  -webkit-box-pack: justify;
+  -moz-box-pack: justify;
+  -o-box-pack: justify;
+  -ms-flex-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -o-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+#algolia-search .search-dialog #algolia-info .ais-PoweredBy-logo path:first-child {
+  display: none;
+}
+#algolia-search .search-dialog #algolia-info .ais-PoweredBy-logo path:nth-child(2),
+#algolia-search .search-dialog #algolia-info .ais-PoweredBy-logo path:nth-child(4) {
+  fill: var(--theme-color);
+}
+@media screen and (max-width: 768px) {
+  .apple #algolia-search #algolia-hits > div {
+    height: calc(90vh - 260px);
+  }
+}
 .search-dialog {
   position: fixed;
   top: 10%;
