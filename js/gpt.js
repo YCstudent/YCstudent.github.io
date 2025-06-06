@@ -138,7 +138,7 @@ async function fetchSparkLiteSummary(content) {
         console.log('读取IndexedDB缓存失败', e);
     }
 
-    const proxyApiUrl = "https://spark-lilac.vercel.app/api/spark-proxy.js";
+    const proxyApiUrl = "https://jhcx330.online/api/spark-proxy.js";
     const requestDataToProxy = { content: content, title: title };
     const timeout = 30000;
 
