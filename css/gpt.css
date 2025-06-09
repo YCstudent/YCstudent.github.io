@@ -1,9 +1,17 @@
-/* 完整版：仅在原始样式基础上调整背景色（使用橙色半透明），以兼容白天/黑夜模式，文字与边框保留原有变量 */
+/* ---------- 动画 ---------- */
+@keyframes spin-hover {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+@keyframes blinking-cursor {
+    0%, 40% { opacity: 1; }
+    50%, 90% { opacity: 0; }
+    100% { opacity: 1; }
+}
 
-/* ---------- SparkLite 样式 ---------- */
-
+/* ---------- 外部容器（主要区域） ---------- */
 .post-SparkLite {
-    background: rgba(255, 152, 0, 0.08); /* 浅橙半透明背景 */
+    background: rgba(0, 0, 0, 0.05); /* 白天：浅黑透明 */
     border-radius: 12px;
     padding: 12px;
     line-height: 1.3;
@@ -11,16 +19,16 @@
     margin: 16px 0;
 }
 
-@media screen and (max-width: 768px) {
-    .post-SparkLite {
-        margin-top: 22px;
-    }
+/* 夜晚：主区域亮灰背景 + 边框 */
+[data-theme="dark"] .post-SparkLite {
+    background: #2a2a2a;
+    border: 1px solid #444;
 }
 
+/* ---------- 标题行 ---------- */
 .sparkLite-title {
     display: flex;
-    color: var(--efu-lighttext);
-    background: rgba(255, 152, 0, 0.25); /* 深橙半透明背景 */
+    background: transparent;
     border-radius: 8px;
     align-items: center;
     padding: 0 12px;
@@ -28,42 +36,38 @@
     user-select: none;
 }
 
+/* 标题文字：橙红色 */
 .sparkLite-title-text {
     font-weight: bold;
     margin-left: 8px;
     line-height: 1;
+    color: #ff5722;
 }
 
+/* 图标尺寸和颜色 */
 .sparkLite-title-icon {
     width: 20px;
     height: 20px;
 }
-
 .sparkLite-title-icon svg {
-    width: 20px;
-    height: 20px;
-    fill: var(--efu-main);
+    width: 24px;
+    height: 24px;
+    fill: #ff5722; /* 默认橙红 */
+}
+
+[data-theme="dark"] .sparkLite-title-icon svg {
+    fill: #ff5722; /* 夜间白色 */
 }
 
 .sparkLite-title-icon svg path {
     fill: var(--efu-main);
 }
 
-.sparkLite-explanation {
-    margin-top: 12px;
-    padding: 8px 12px;
-    background: rgba(255, 152, 0, 0.04); /* 非常浅的橙半透明背景 */
-    border-radius: 8px;
-    border: var(--style-border-always);
-    font-size: 15px;
-    line-height: 1.4;
-    display: flex;
-}
-
+/* ---------- 模型标签 ---------- */
 .sparkLite-tag {
     font-size: 12px;
-    background-color: rgba(255, 152, 0, 0.25); /* 中等橙半透明背景 */
-    color: var(--efu-card-bg);
+    background-color: #ff5722;    /* 橙红底色 */
+    color: #ffffff;               /* 白天白字 */
     font-weight: bold;
     border-radius: 4px;
     margin-left: auto;
@@ -76,81 +80,53 @@
     transition: 0.3s;
 }
 
+/* 夜间改为黑字 */
+[data-theme="dark"] .sparkLite-tag {
+    color: #000000;
+}
+
+/* 悬停反色 */
 .sparkLite-tag:hover {
     background: var(--efu-fontcolor);
     color: var(--efu-card-bg);
 }
 
-/* ---------- tianliGPT 样式 ---------- */
-
-.tianliGPT-title {
-    display: flex;
-    color: var(--efu-lighttext);
-    background: rgba(255, 152, 0, 0.25); /* 深橙半透明背景 */
-    border-radius: 8px;
-    align-items: center;
-    padding: 0 12px;
-    cursor: default;
-    user-select: none;
-}
-
-.tianliGPT-title-text {
-    font-weight: bold;
-    margin-left: 8px;
-    line-height: 1;
-}
-
-.tianliGPT-title-icon {
-    width: 20px;
-    height: 20px;
-}
-
-.tianliGPT-title-icon svg {
-    width: 20px;
-    height: 20px;
-    fill: var(--efu-main);
-}
-
-.tianliGPT-title-icon svg path {
-    fill: var(--efu-main);
-}
-
-.tianliGPT-explanation {
-    margin-top: 12px;
-    padding: 8px 12px;
-    background: rgba(255, 152, 0, 0.04); /* 非常浅的橙半透明背景 */
-    border-radius: 8px;
-    border: var(--style-border-always);
-    font-size: 15px;
-    line-height: 1.4;
-    display: flex;
-}
-
-.tianliGPT-suggestions {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.tianliGPT-suggestions .tianliGPT-suggestions-item {
-    margin-top: 12px;
-    padding: 8px 12px;
-    background: rgba(255, 152, 0, 0.06); /* 稍浅橙半透明背景 */
-    border-radius: 8px 8px 8px 0;
-    border: var(--style-border-always);
-    font-size: 15px;
-    line-height: 1.4;
-    display: flex;
-    width: fit-content;
-    margin-right: 12px;
+/* ---------- 刷新按钮（⟳） ---------- */
+.sparkLite-refresh-btn {
+    font-size: 16px;
+    margin-left: 6px;
     cursor: pointer;
-    transition: 0.3s;
+    user-select: none;
+    transition: transform 0.3s;
 }
 
-.tianliGPT-suggestions .tianliGPT-suggestions-item:hover {
-    background: var(--efu-main);
-    color: var(--efu-white);
+/* 悬停旋转动画 */
+.sparkLite-refresh-btn:hover {
+    animation: spin-hover 1s linear infinite;
+    transform-origin: center;
 }
 
+/* ---------- 摘要内容区域（打字区域） ---------- */
+.sparkLite-explanation {
+    margin-top: 12px;
+    padding: 8px 12px;
+    background: rgba(0, 0, 0, 0.02); /* 白天：极浅透明黑 */
+    border-radius: 8px;
+    border: var(--style-border-always);
+    font-size: 15px;
+    line-height: 1.4;
+    display: flex;
+    color: var(--efu-fontcolor); /* 自动主题字色 */
+}
+
+/* 夜晚：打字区域设为纯黑背景 + 白色字体 */
+[data-theme="dark"] .sparkLite-explanation {
+    background: #000000;
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* ---------- 光标动画 ---------- */
 .blinking-cursor {
     background-color: var(--efu-main);
     width: 10px;
@@ -160,71 +136,4 @@
     animation: blinking-cursor 0.5s infinite;
     -webkit-animation: blinking-cursor 0.5s infinite;
     margin-left: 4px;
-}
-
-@keyframes blinking-cursor {
-    0% {
-        opacity: 1;
-    }
-    40% {
-        opacity: 1;
-    }
-    50% {
-        opacity: 0;
-    }
-    90% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
-.tianliGPT-tag {
-    font-size: 12px;
-    background-color: rgba(255, 152, 0, 0.25); /* 中等橙半透明背景 */
-    color: var(--efu-card-bg);
-    font-weight: bold;
-    border-radius: 4px;
-    margin-left: auto;
-    line-height: 1;
-    padding: 4px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.tianliGPT-tag:hover {
-    background: var(--efu-fontcolor);
-    color: var(--efu-card-bg);
-}
-
-/* 广告插入区保持原有样式，不修改背景 */
-ins.adsbygoogle {
-    margin: 16px 0;
-    background: var(--efu-card-bg);
-    border-radius: 12px;
-    overflow: hidden;
-    border: var(--style-border-always);
-}
-
-/* 切换按钮保持原有样式，不修改背景 */
-#tianliGPT-Toggle {
-    font-size: 12px;
-    background: var(--efu-lighttext);
-    color: var(--efu-card-bg);
-    padding: 4px;
-    border-radius: 4px;
-    margin-left: 6px;
-    transform: scale(0.8);
-    cursor: pointer;
-    transition: 0.3s;
-    font-weight: bold;
-}
-
-#tianliGPT-Toggle:hover {
-    background: var(--efu-fontcolor);
-    color: var(--efu-card-bg);
 }
